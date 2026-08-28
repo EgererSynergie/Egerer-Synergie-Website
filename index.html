@@ -306,8 +306,8 @@
   .contact-intro h2{font-size:clamp(1.7rem,4vw,2rem);margin:.4em 0 .6em}
   .contact-intro p{color:var(--ink-70);font-size:1.06rem;max-width:40ch;margin-bottom:1.6em}
   .contact-intro .direct{display:flex;flex-direction:column;gap:12px;margin-top:1.4em}
-  .contact-intro .direct a{display:inline-flex;align-items:center;gap:.7em;color:var(--ink);font-size:1rem}
-  .contact-intro .direct a svg{width:18px;height:18px;stroke:var(--petrol)}
+  .contact-intro .direct span.email-plain{display:inline-flex;align-items:center;gap:.7em;color:var(--ink);font-size:1rem}
+  .contact-intro .direct span.email-plain svg{width:18px;height:18px;stroke:var(--petrol)}
   form.contact{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:clamp(26px,3.5vw,38px)}
   .field{margin-bottom:18px}
   .field label{display:block;font-family:"Archivo";font-size:.74rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-45);margin-bottom:.5em}
@@ -377,17 +377,17 @@
       <span></span><span></span><span></span>
     </button>
   </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <div class="wrap">
-      <a class="navlink" href="#leistungen">Leistungen</a>
-      <a class="navlink" href="#ueber-mich">Über mich</a>
-      <a class="navlink" href="#stimmen">Kundenstimmen</a>
-      <a class="navlink" href="#prozess">Ablauf</a>
-      <a class="navlink" href="#kontakt">Kontakt</a>
-      <a class="btn" href="#kontakt">Kostenfreies Erstgespräch <span class="arr">&rarr;</span></a>
-    </div>
-  </div>
 </header>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="wrap">
+    <a class="navlink" href="#leistungen">Leistungen</a>
+    <a class="navlink" href="#ueber-mich">Über mich</a>
+    <a class="navlink" href="#stimmen">Kundenstimmen</a>
+    <a class="navlink" href="#prozess">Ablauf</a>
+    <a class="navlink" href="#kontakt">Kontakt</a>
+    <a class="btn" href="#kontakt">Kostenfreies Erstgespräch <span class="arr">&rarr;</span></a>
+  </div>
+</div>
 
 <!-- ============ HERO ============ -->
 <section class="hero">
@@ -668,7 +668,7 @@
       <h2>Erzählen Sie mir von Ihrem Vorhaben.</h2>
       <p>Ein paar Sätze genügen – ich melde mich zeitnah für ein kostenfreies Erstgespräch.</p>
       <div class="direct">
-        <a href="mailto:service@egerer-synergie.de"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg> service@egerer-synergie.de</a>
+        <span class="email-plain"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg> service [at] egerer-synergie.de</span>
       </div>
     </div>
 
