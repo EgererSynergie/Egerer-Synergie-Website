@@ -349,11 +349,28 @@
 
   /* ---------- footer ---------- */
   footer.site{background:var(--paper);color:var(--ink-45);padding:32px 0;margin-top:var(--gap);border-top:1px solid var(--line)}
-  .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-size:.8125rem;font-family:"Archivo";color:var(--ink-45)}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-size:.8125rem;font-family:"Archivo";color:var(--ink-70)}
   .foot-bottom .slash{color:var(--amber);font-family:"IBM Plex Mono",monospace;font-weight:700;letter-spacing:-.08em}
-  .foot-bottom a{transition:.2s;color:var(--ink-45)}
+  .foot-bottom a{transition:.2s;color:var(--ink-70)}
   .foot-bottom a:hover{color:var(--ink)}
   .foot-links{display:flex;gap:22px;flex-wrap:wrap}
+
+  /* ---------- portfolio-teaser ---------- */
+  .pf-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:clamp(36px,5vw,56px)}
+  .pf-head .sec-head{margin-bottom:0}
+  .pf-link{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:600;color:var(--petrol)}
+  .pf-link span{border-bottom:1px solid currentColor}
+  .pf-link:hover{color:var(--petrol-deep)}
+  .pf-link:focus-visible,.pf-tile-link:focus-visible{outline:2px solid var(--focus);outline-offset:4px}
+  .pf-teaser-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 32px}
+  @media(max-width:860px){.pf-teaser-grid{grid-template-columns:1fr}}
+  .pf-tile-link{display:flex;flex-direction:column;gap:16px;min-width:0;border-radius:12px}
+  .pf-tile-link .pf-logo{aspect-ratio:16/10;background:var(--card);border-radius:12px;display:flex;justify-content:center;align-items:center;padding:32px;transition:background .25s ease}
+  .pf-tile-link:hover .pf-logo{background:var(--card-pressed)}
+  .pf-tile-link .pf-logo img{max-width:82%;height:auto}
+  .pf-tile-link .pf-client{font-size:.875rem;font-weight:600;color:var(--ink-70)}
+  .pf-tile-link .pf-title{font-size:1.375rem;line-height:1.25;font-weight:700;color:var(--ink)}
+  .pf-tile-link:hover .pf-title{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
 
   /* ---------- reveal ---------- */
   .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
@@ -377,6 +394,7 @@
     <nav class="nav-links">
       <a class="navlink" href="#leistungen">Leistungen</a>
       <a class="navlink" href="#ueber-mich">Über mich</a>
+      <a class="navlink" href="portfolio.html">Portfolio</a>
       <a class="navlink" href="#stimmen">Kundenstimmen</a>
       <a class="navlink" href="#prozess">Ablauf</a>
       <a class="navlink" href="#kontakt">Kontakt</a>
@@ -390,6 +408,7 @@
   <div class="wrap">
     <a class="navlink" href="#leistungen">Leistungen</a>
     <a class="navlink" href="#ueber-mich">Über mich</a>
+    <a class="navlink" href="portfolio.html">Portfolio</a>
     <a class="navlink" href="#stimmen">Kundenstimmen</a>
     <a class="navlink" href="#prozess">Ablauf</a>
     <a class="navlink" href="#kontakt">Kontakt</a>
@@ -490,6 +509,37 @@
         <span class="node">1</span>
         <p>Fester Ansprechpartner – von Anfang bis Launch</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PORTFOLIO-TEASER ============ -->
+<section class="block" id="portfolio" style="padding-top:0">
+  <div class="wrap">
+    <div class="pf-head reveal">
+      <div class="sec-head">
+        <span class="eyebrow">Portfolio</span>
+        <h2>Ausgewählte Projekte</h2>
+        <p>Von der Online-Akademie bis zu KI-gestützten Lernpfaden: Was entsteht, wenn Plattform, Didaktik und Inhalt von Anfang an zusammen gedacht werden.</p>
+      </div>
+      <a class="pf-link" href="portfolio.html"><span>Alle Projekte ansehen</span></a>
+    </div>
+    <div class="pf-teaser-grid">
+      <a class="pf-tile-link reveal" href="portfolio.html#tuev-nord">
+        <span class="pf-logo"><img src="assets/portfolio/logo-tuev-nord.svg" alt="Logo TÜV NORD Akademie" width="248" height="124" loading="lazy" decoding="async"></span>
+        <span class="pf-client">TÜV NORD Akademie</span>
+        <span class="pf-title">Von null zur Online-Akademie</span>
+      </a>
+      <a class="pf-tile-link reveal" href="portfolio.html#stark-verlag">
+        <span class="pf-logo"><img src="assets/portfolio/logo-stark-verlag.svg" alt="Logo STARK Verlag" width="216" height="47" loading="lazy" decoding="async"></span>
+        <span class="pf-client">STARK Verlag</span>
+        <span class="pf-title">Vom Buch zur digitalen Lernwelt</span>
+      </a>
+      <a class="pf-tile-link reveal" href="portfolio.html#f-bb">
+        <span class="pf-logo"><img src="assets/portfolio/logo-f-bb.svg" alt="Logo Forschungsinstitut Betriebliche Bildung (f-bb)" width="236" height="48" loading="lazy" decoding="async"></span>
+        <span class="pf-client">Forschungsinstitut Betriebliche Bildung (f-bb)</span>
+        <span class="pf-title">Lernpfade, die sich anpassen</span>
+      </a>
     </div>
   </div>
 </section>
